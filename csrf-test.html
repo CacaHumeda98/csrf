@@ -1,4 +1,10 @@
-<form action="https://www.boozt.com/eu/en/api/customer/birthday" method="POST">
-  <input type="hidden" name="birthday" value="1999-12-31">
-  <input type="submit" value="Submit">
-</form>
+POST /eu/en/api/customer/birthday HTTP/2
+Host: www.boozt.com
+Cookie: PHPSESSID=YOUR_SESSION; signedin=YOUR_AUTH; REMEMBERME=...
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Origin: https://www.boozt.com
+Referer: https://www.boozt.com/
+Csrf-Token: 76ee94f7a6f55bf620830ad1abf30fa6
+
+{"birthday":"1990-12-31"}
